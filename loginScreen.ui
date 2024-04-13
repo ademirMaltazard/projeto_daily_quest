@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>685</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>680</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>MS Gothic</family>
+    <pointsize>20</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#050F18;
+color: #ffffff;</string>
+  </property>
+  <widget class="QLabel" name="label_tittle">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>100</y>
+     <width>231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Gothic</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 5px 0px;
+border-style: outset;
+border-color: #2291F2</string>
+   </property>
+   <property name="text">
+    <string>LOGIN</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_login">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>200</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Gothic</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>INSIRA SEU LOGIN:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_password">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>300</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Gothic</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>INSIRA SUA SENHA:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_login">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>240</y>
+     <width>391</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 2px;
+border-style: outset;
+border-color: #2291F2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>login</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_password">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>340</y>
+     <width>391</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 2px;
+border-style: outset;
+border-color: #2291F2
+</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>senha</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_login">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>410</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Gothic</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #052159;
+border-width: 2px;
+border-style: outset;
+border-color: #2291F2;
+border-radius: 5px;
+}
+
+QPushButton:pressed{
+background-color: #0F4ABF;
+border-width: 2px;
+border-style: outset;
+border-color: #2291F2;
+border-radius: 5px;
+}</string>
+   </property>
+   <property name="text">
+    <string>ENTRAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_hideShow">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>350</y>
+     <width>21</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 2px;
+border-style: outset;
+border-color: #2291F2
+</string>
+   </property>
+   <property name="text">
+    <string>H</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
