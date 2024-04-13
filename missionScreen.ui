@@ -223,7 +223,7 @@ border-color: #2291F2
   <widget class="QTreeWidget" name="treeWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>40</x>
      <y>150</y>
      <width>621</width>
      <height>191</height>
