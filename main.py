@@ -1,5 +1,6 @@
 from PyQt5 import uic, QtWidgets
 import mysql.connector
+from PyQt5.QtWidgets import QTreeWidgetItem, QRadioButton
 
 conexao = mysql.connector.connect(
     host='localhost',
@@ -11,10 +12,7 @@ conexao = mysql.connector.connect(
 print('CONECTADO COM SUCESSO AO BANCO daily_quest_database')
 cursor = conexao.cursor(dictionary=True)
 
-cursor.execute('SELECT * FROM users')
-resultado = cursor.fetchall()
-print(resultado)
-loggeduser = {}
+loggedUser = {}
 
 #  FUNÇÕES
 def CheckLogin():
@@ -23,18 +21,17 @@ def CheckLogin():
 
     query = 'SELECT * FROM users WHERE login_user = %s'
     cursor.execute(query, (userLogin,))
-    result = cursor.fetchall()
-    print(result)
+    result = cursor.fetchone()
 
-    if len(result) <= 0:
+    if result is None:
         alertScreen.show()
     else:
-        if result[0]['password_user'] == userPassword:
-            print(result[0]['login_user'])
-            global loggeduser
-            loggeduser = result[0]
+        if result['password_user'] == userPassword:
+            #print(result['login_user'])
+            global loggedUser
+            loggedUser = result
+            ShowQuests()
             loginScreen.close()
-            missionScreen.show()
         else:
             alertScreen.show()
 
@@ -43,6 +40,23 @@ def CloseScreenAlert():
     alertScreen.close()
     loginScreen.lineEdit_login.setText('')
     loginScreen.lineEdit_password.setText('')
+
+def ShowQuests():
+    missionScreen.show()
+    query = f'SELECT * FROM exercises WHERE status_exercise = "ativado"'
+    cursor.execute(query)
+    activeQuest = cursor.fetchall()
+    print(activeQuest)
+
+    # missionScreen.treeWidget_quest
+    # print('passou')
+    #
+    # row = 0
+    # for indice in activeQuest:
+    #     print('quantidade: ', indice['quantity_exercise'])
+    #     # missionScreen.treeWidget_quest.setItem(row, 0, QRadioButton().create())
+    #     missionScreen.treeWidget_quest.setItem(row, 1, QtWidgets.QTreeWidgetItem(indice['quantity_exercise']))
+    #
 
 #  GERANDO UMA APLICAÇÃO
 app = QtWidgets.QApplication([])

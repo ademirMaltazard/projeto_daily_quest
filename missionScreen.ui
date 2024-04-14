@@ -58,7 +58,7 @@ border-color: #2291F2</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_login">
+  <widget class="QLabel" name="label_theme">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -82,7 +82,7 @@ border-color: #2291F2</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_password">
+  <widget class="QLabel" name="label_statusQuest">
    <property name="geometry">
     <rect>
      <x>300</x>
@@ -109,11 +109,16 @@ border-color: #2291F2</string>
   <widget class="QLineEdit" name="lineEdit_login">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>540</y>
-     <width>391</width>
+     <x>210</x>
+     <y>510</y>
+     <width>141</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">border-width: 2px;
@@ -127,47 +132,11 @@ border-color: #2291F2</string>
     <string>login</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_password">
+  <widget class="QPushButton" name="pushButton_done">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>500</y>
-     <width>391</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <kerning>true</kerning>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-width: 2px;
-border-style: outset;
-border-color: #2291F2
-</string>
-   </property>
-   <property name="inputMask">
-    <string/>
-   </property>
-   <property name="maxLength">
-    <number>32767</number>
-   </property>
-   <property name="echoMode">
-    <enum>QLineEdit::Password</enum>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string>senha</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_login">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>500</y>
+     <x>540</x>
+     <y>510</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -198,29 +167,10 @@ border-radius: 5px;
 }</string>
    </property>
    <property name="text">
-    <string>ENTRAR</string>
+    <string>CONCLUÍDO</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_hideShow">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>550</y>
-     <width>21</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-width: 2px;
-border-style: outset;
-border-color: #2291F2
-</string>
-   </property>
-   <property name="text">
-    <string>H</string>
-   </property>
-  </widget>
-  <widget class="QTreeWidget" name="treeWidget">
+  <widget class="QTreeWidget" name="treeWidget_quest">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -231,7 +181,7 @@ border-color: #2291F2
    </property>
    <column>
     <property name="text">
-     <string>mark</string>
+     <string>Marcação</string>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -248,7 +198,7 @@ border-color: #2291F2
    </column>
    <column>
     <property name="text">
-     <string>quantidade</string>
+     <string>Quantidade</string>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -265,7 +215,7 @@ border-color: #2291F2
    </column>
    <column>
     <property name="text">
-     <string>nome</string>
+     <string>Exercício</string>
     </property>
     <property name="font">
      <font>
@@ -286,7 +236,7 @@ border-color: #2291F2
     </property>
    </column>
   </widget>
-  <widget class="QLabel" name="label_password_2">
+  <widget class="QLabel" name="label_statusPunition">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -308,6 +258,126 @@ border-color: #2291F2
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="treeWidget_punition">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>621</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Quantidade</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Descrição</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton_saveInfo">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>510</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Gothic</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #052159;
+border-width: 2px;
+border-style: outset;
+border-color: #2291F2;
+border-radius: 5px;
+}
+
+QPushButton:pressed{
+background-color: #0F4ABF;
+border-width: 2px;
+border-style: outset;
+border-color: #2291F2;
+border-radius: 5px;
+}</string>
+   </property>
+   <property name="text">
+    <string>SALVAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_logout">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>510</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Gothic</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #052159;
+border-width: 2px;
+border-style: outset;
+border-color: #2291F2;
+border-radius: 5px;
+}
+
+QPushButton:pressed{
+background-color: #0F4ABF;
+border-width: 2px;
+border-style: outset;
+border-color: #2291F2;
+border-radius: 5px;
+}</string>
+   </property>
+   <property name="text">
+    <string>LOGOUT</string>
    </property>
   </widget>
  </widget>
