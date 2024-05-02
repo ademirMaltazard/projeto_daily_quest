@@ -18,7 +18,7 @@ def CheckLogin():
         if result['password_user'] == userPassword:
             global loggedUser
             loggedUser = result
-            ShowQuests()
+            ShowDailyQuest()
             loginScreen.close()
         else:
             result = None
@@ -31,7 +31,7 @@ def CloseScreenAlert():
     loginScreen.lineEdit_login.setText('')
     loginScreen.lineEdit_password.setText('')
 
-def ShowQuests():
+def ShowDailyQuest():
     missionScreen.show()
     activeQuest = databaseCRUD().SearchExercise()
     print(activeQuest)
