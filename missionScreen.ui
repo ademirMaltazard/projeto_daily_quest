@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>centralWidget</class>
+ <widget class="QWidget" name="centralWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>685</width>
-    <height>582</height>
+    <height>580</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -170,72 +170,6 @@ border-radius: 5px;
     <string>CONCLUÍDO</string>
    </property>
   </widget>
-  <widget class="QTreeWidget" name="treeWidget_quest">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>150</y>
-     <width>621</width>
-     <height>191</height>
-    </rect>
-   </property>
-   <column>
-    <property name="text">
-     <string>Marcação</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignCenter</set>
-    </property>
-    <property name="foreground">
-     <brush brushstyle="SolidPattern">
-      <color alpha="255">
-       <red>0</red>
-       <green>0</green>
-       <blue>0</blue>
-      </color>
-     </brush>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Quantidade</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignCenter</set>
-    </property>
-    <property name="foreground">
-     <brush brushstyle="SolidPattern">
-      <color alpha="255">
-       <red>0</red>
-       <green>0</green>
-       <blue>0</blue>
-      </color>
-     </brush>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Exercício</string>
-    </property>
-    <property name="font">
-     <font>
-      <stylestrategy>PreferDefault</stylestrategy>
-     </font>
-    </property>
-    <property name="textAlignment">
-     <set>AlignCenter</set>
-    </property>
-    <property name="foreground">
-     <brush brushstyle="SolidPattern">
-      <color alpha="255">
-       <red>0</red>
-       <green>0</green>
-       <blue>0</blue>
-      </color>
-     </brush>
-    </property>
-   </column>
-  </widget>
   <widget class="QLabel" name="label_statusPunition">
    <property name="geometry">
     <rect>
@@ -259,50 +193,6 @@ border-radius: 5px;
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
-  </widget>
-  <widget class="QTreeWidget" name="treeWidget_punition">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>380</y>
-     <width>621</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <column>
-    <property name="text">
-     <string>Quantidade</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignCenter</set>
-    </property>
-    <property name="foreground">
-     <brush brushstyle="SolidPattern">
-      <color alpha="255">
-       <red>0</red>
-       <green>0</green>
-       <blue>0</blue>
-      </color>
-     </brush>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Descrição</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignCenter</set>
-    </property>
-    <property name="foreground">
-     <brush brushstyle="SolidPattern">
-      <color alpha="255">
-       <red>0</red>
-       <green>0</green>
-       <blue>0</blue>
-      </color>
-     </brush>
-    </property>
-   </column>
   </widget>
   <widget class="QPushButton" name="pushButton_saveInfo">
    <property name="geometry">
@@ -379,6 +269,145 @@ border-radius: 5px;
    <property name="text">
     <string>LOGOUT</string>
    </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_quest">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>150</y>
+     <width>621</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustToContents</enum>
+   </property>
+   <property name="autoScrollMargin">
+    <number>16</number>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="textElideMode">
+    <enum>Qt::ElideLeft</enum>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::DashDotLine</enum>
+   </property>
+   <property name="rowCount">
+    <number>1</number>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>309</number>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>48</number>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <row/>
+   <column>
+    <property name="text">
+     <string>Quantidade</string>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Exercício</string>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_punition">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>621</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>206</number>
+   </attribute>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>70</number>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>60</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Punição</string>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantidade</string>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Descrição</string>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>
