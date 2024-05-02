@@ -1,16 +1,6 @@
-from PyQt5 import uic, QtWidgets
-import mysql.connector
-from PyQt5.QtWidgets import QTreeWidgetItem, QRadioButton
+from PyQt5 import uic, QtWidgets, QtCore
+from db import databaseCRUD
 
-conexao = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='',
-    database='daily_quest_database'
-)
-
-print('CONECTADO COM SUCESSO AO BANCO daily_quest_database')
-cursor = conexao.cursor(dictionary=True)
 
 loggedUser = {}
 
@@ -19,21 +9,21 @@ def CheckLogin():
     userLogin = loginScreen.lineEdit_login.text()
     userPassword = loginScreen.lineEdit_password.text()
 
-    query = 'SELECT * FROM users WHERE login_user = %s'
-    cursor.execute(query, (userLogin,))
-    result = cursor.fetchone()
+    result = databaseCRUD().SearchOne(userLogin)
 
     if result is None:
+        print(result)
         alertScreen.show()
     else:
         if result['password_user'] == userPassword:
-            #print(result['login_user'])
             global loggedUser
             loggedUser = result
             ShowQuests()
             loginScreen.close()
         else:
+            result = None
             alertScreen.show()
+            print(result)
 
 
 def CloseScreenAlert():
@@ -43,20 +33,28 @@ def CloseScreenAlert():
 
 def ShowQuests():
     missionScreen.show()
-    query = f'SELECT * FROM exercises WHERE status_exercise = "ativado"'
-    cursor.execute(query)
-    activeQuest = cursor.fetchall()
+    activeQuest = databaseCRUD().SearchExercise()
     print(activeQuest)
+    missionScreen.tableWidget_quest.setRowCount(len(activeQuest))
 
-    # missionScreen.treeWidget_quest
-    # print('passou')
-    #
-    # row = 0
-    # for indice in activeQuest:
-    #     print('quantidade: ', indice['quantity_exercise'])
-    #     # missionScreen.treeWidget_quest.setItem(row, 0, QRadioButton().create())
-    #     missionScreen.treeWidget_quest.setItem(row, 1, QtWidgets.QTreeWidgetItem(indice['quantity_exercise']))
-    #
+    row = 0
+    for indice in activeQuest:
+        print((indice))
+        missionScreen.tableWidget_quest.setItem(row, 0, QtWidgets.QTableWidgetItem(indice["quantity_exercise"]))
+        missionScreen.tableWidget_quest.setItem(row, 1, QtWidgets.QTableWidgetItem(indice["name_exercise"]))
+        row += 1
+
+    activePunition = databaseCRUD().SerachPunition()
+    print(activePunition)
+    missionScreen.tableWidget_punition.setRowCount(len(activePunition))
+
+    row = 0
+    for indice in activePunition:
+        print((indice))
+        missionScreen.tableWidget_punition.setItem(row, 0, QtWidgets.QTableWidgetItem(indice["name_punition"]))
+        missionScreen.tableWidget_punition.setItem(row, 1, QtWidgets.QTableWidgetItem(indice["quantity_punition"]))
+        missionScreen.tableWidget_punition.setItem(row, 2, QtWidgets.QTableWidgetItem(indice["description_punition"]))
+        row += 1
 
 #  GERANDO UMA APLICAÇÃO
 app = QtWidgets.QApplication([])
