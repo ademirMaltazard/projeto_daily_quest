@@ -25,7 +25,23 @@ def CheckLogin():
             alertScreen.show()
             print(result)
 
+def CreateNewUser():
+    name = singinScreen.lineEdit_name.text()
+    login = singinScreen.lineEdit_login.text()
+    password = singinScreen.lineEdit_password.text()
+    confirmPassword = singinScreen.lineEdit_confirmPassword.text()
+    cod = singinScreen.lineEdit_code.text()
 
+    print(name, login, password, confirmPassword, cod)
+    if password == confirmPassword:
+        databaseCRUD().CreateNewUser(name, login, password, cod)
+        singinScreen.lineEdit_name.setText('')
+        singinScreen.lineEdit_login.setText('')
+        singinScreen.lineEdit_password.setText('')
+        singinScreen.lineEdit_confirmPassword.setText('')
+        singinScreen.lineEdit_code.setText('')
+    else:
+        alertScreen.show()
 def CloseScreenAlert():
     alertScreen.close()
     loginScreen.lineEdit_login.setText('')
@@ -56,17 +72,32 @@ def ShowDailyQuest():
         missionScreen.tableWidget_punition.setItem(row, 2, QtWidgets.QTableWidgetItem(indice["description_punition"]))
         row += 1
 
+def lodinToSingin():
+    loginScreen.close()
+    singinScreen.show()
+
+def returnScreen(ui1, ui2):
+    ui1.close()
+    ui2.show()
+def back():
+    returnScreen(singinScreen, loginScreen)
+
+
 #  GERANDO UMA APLICAÇÃO
 app = QtWidgets.QApplication([])
 
 #  CARREGAR ARQUIVO UI
 loginScreen = uic.loadUi('loginScreen.ui')
 missionScreen = uic.loadUi('missionScreen.ui')
+singinScreen = uic.loadUi('singinScreen.ui')
 alertScreen = uic.loadUi('alert.ui')
 
 #  AÇÕES
 loginScreen.pushButton_login.clicked.connect(CheckLogin)
+loginScreen.pushButton_singin.clicked.connect(lodinToSingin)
+singinScreen.pushButton_singin.clicked.connect(CreateNewUser)
 alertScreen.pushButton_confirm.clicked.connect(CloseScreenAlert)
+singinScreen.pushButton_back.clicked.connect(back)
 
 #  EXIBIR NA TELA
 loginScreen.show()
