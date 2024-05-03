@@ -330,7 +330,7 @@ border-color: #2291F2
     <set>Qt::AlignCenter</set>
    </property>
    <property name="placeholderText">
-    <string>Senha</string>
+    <string>Confirmação de senha</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_code">
@@ -388,7 +388,7 @@ border-color: #2291F2
     <set>Qt::AlignCenter</set>
    </property>
    <property name="placeholderText">
-    <string>senha</string>
+    <string>Código</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_back">

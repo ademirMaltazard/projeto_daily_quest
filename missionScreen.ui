@@ -32,9 +32,9 @@ color: #ffffff;</string>
   <widget class="QLabel" name="label_tittle">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>10</y>
-     <width>381</width>
+     <x>160</x>
+     <y>20</y>
+     <width>371</width>
      <height>41</height>
     </rect>
    </property>
@@ -63,7 +63,7 @@ border-color: #2291F2</string>
     <rect>
      <x>220</x>
      <y>90</y>
-     <width>241</width>
+     <width>251</width>
      <height>31</height>
     </rect>
    </property>
@@ -87,7 +87,7 @@ border-color: #2291F2</string>
     <rect>
      <x>300</x>
      <y>120</y>
-     <width>81</width>
+     <width>91</width>
      <height>21</height>
     </rect>
    </property>
@@ -104,32 +104,6 @@ border-color: #2291F2</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_login">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>510</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>16</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-width: 2px;
-border-style: outset;
-border-color: #2291F2</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string>login</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_done">
@@ -194,19 +168,19 @@ border-radius: 5px;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_saveInfo">
+  <widget class="QPushButton" name="pushButton_seeProgress">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>380</x>
      <y>510</y>
-     <width>121</width>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>MS Gothic</family>
-     <pointsize>16</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -229,7 +203,7 @@ border-radius: 5px;
 }</string>
    </property>
    <property name="text">
-    <string>SALVAR</string>
+    <string>VER PROGRESSO</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_logout">
@@ -273,9 +247,9 @@ border-radius: 5px;
   <widget class="QTableWidget" name="tableWidget_quest">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>150</y>
-     <width>621</width>
+     <width>631</width>
      <height>192</height>
     </rect>
    </property>
@@ -301,7 +275,7 @@ border-radius: 5px;
     <number>1</number>
    </property>
    <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>309</number>
+    <number>314</number>
    </attribute>
    <attribute name="horizontalHeaderMinimumSectionSize">
     <number>48</number>
@@ -342,9 +316,9 @@ border-radius: 5px;
   <widget class="QTableWidget" name="tableWidget_punition">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>380</y>
-     <width>621</width>
+     <width>631</width>
      <height>101</height>
     </rect>
    </property>
@@ -352,7 +326,7 @@ border-radius: 5px;
     <bool>true</bool>
    </attribute>
    <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>206</number>
+    <number>209</number>
    </attribute>
    <attribute name="horizontalHeaderHighlightSections">
     <bool>false</bool>

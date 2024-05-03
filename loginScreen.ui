@@ -123,7 +123,7 @@ border-color: #2291F2</string>
     <set>Qt::AlignCenter</set>
    </property>
    <property name="placeholderText">
-    <string>login</string>
+    <string>Login</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_password">
@@ -160,7 +160,7 @@ border-color: #2291F2
     <set>Qt::AlignCenter</set>
    </property>
    <property name="placeholderText">
-    <string>senha</string>
+    <string>Senha</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_singin">
