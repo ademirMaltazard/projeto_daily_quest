@@ -221,6 +221,43 @@ border-color: #2291F2
     <string>Confirmação de senha</string>
    </property>
   </widget>
+  <widget class="QLineEdit" name="lineEdit_code">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>500</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 2px;
+border-style: outset;
+border-color: #2291F2
+</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Código</string>
+   </property>
+  </widget>
   <widget class="QLabel" name="label_code">
    <property name="geometry">
     <rect>
@@ -354,44 +391,7 @@ border-color: #2291F2</string>
     <string>CONFIRME SUA SENHA:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_code">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>500</y>
-     <width>161</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-     <kerning>true</kerning>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-width: 2px;
-border-style: outset;
-border-color: #2291F2
-</string>
-   </property>
-   <property name="inputMask">
-    <string/>
-   </property>
-   <property name="maxLength">
-    <number>32767</number>
-   </property>
-   <property name="echoMode">
-    <enum>QLineEdit::Password</enum>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string>Código</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_back">
+  <widget class="QPushButton" name="pushButton_logout">
    <property name="geometry">
     <rect>
      <x>20</x>
