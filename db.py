@@ -9,7 +9,7 @@ class databaseCRUD:
             database='daily_quest_database'
         )
 
-        print('CONECTADO COM SUCESSO AO BANCO daily_quest_database')
+        #print('CONECTADO COM SUCESSO AO BANCO daily_quest_database')
         self.cursor = self.conexao.cursor(dictionary=True)
 
     def CreateNewUser(self, name, login, password, cod):
@@ -30,7 +30,6 @@ class databaseCRUD:
 
     def SearchExercise(self):
         query = f'SELECT * FROM exercises WHERE status_exercise = "ativado"'
-        print(query)
         self.cursor.execute(query)
         activeQuest = self.cursor.fetchall()
         return activeQuest
